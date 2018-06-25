@@ -102,14 +102,16 @@ Key to Flags:
   l (large), p (processor specific)
 
 There are no section groups in this file.
-
 ...
 
 Displaying notes found in: .note.gnu.build-id
   Owner                 Data size	Description
   GNU                  0x00000014	NT_GNU_BUILD_ID (unique build ID bitstring)
     Build ID: 81c3eaf7aae62ce40e3dd7e1ae298a20d45ce8f7
+
+...
 cohen@mobdevrcs:/usr/local/src/data2/misc/LLVM/llvm-7/build-Debug/_CPack_Packages/Linux/TXZ/LLVM-7.0.0svn-Linux/bin$ 
+```
 
 ```
 cohen@mobdevrcs:/usr/local/src/data2/misc/LLVM/llvm-7/build-Debug/_CPack_Packages/Linux/TXZ/LLVM-7.0.0svn-Linux-Debug/LLVM-7.0.0svn-Linux/bin/.debug$ LANG=C readelf -a ./clang-change-namespace.debug 
@@ -231,4 +233,3 @@ Displaying notes found in: .note.gnu.build-id
 ...
 cohen@mobdevrcs:/usr/local/src/data2/misc/LLVM/llvm-7/build-Debug/_CPack_Packages/Linux/TXZ/LLVM-7.0.0svn-Linux-Debug/LLVM-7.0.0svn-Linux/bin/.debug$     
 ```
-
