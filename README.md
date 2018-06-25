@@ -4,7 +4,7 @@ This repository contains some little shell scripts allowing to process some _ELF
 
 ## Commands
 
-Three commands are available:
+Three commands are availables:
 * **_extract-debug-infos.sh_**: the actual real command doing the job
 * **_extract-debug-infos-from-dir.sh_**: a wrapper over extract-debug-infos.sh allowing to process all files in a specific dir
 * **_extract-debug-infos-from-tree.sh_**: a wrapper over extract-debug-infos-from-dir.sh allowing to process recursivelly all files under a specific directory.
@@ -236,3 +236,5 @@ Displaying notes found in: .note.gnu.build-id
 ...
 cohen@mobdevrcs:/usr/local/src/data2/misc/LLVM/llvm-7/build-Debug/_CPack_Packages/Linux/TXZ/LLVM-7.0.0svn-Linux-Debug/LLVM-7.0.0svn-Linux/bin/.debug$     
 ```
+
+ -- Rémi Cohen-Scali <cohen@mobdevrcs.jayacode.fr>, Mon, 25 Jun 2018 17:44:15 +0200
