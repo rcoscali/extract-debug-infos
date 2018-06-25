@@ -5,9 +5,9 @@ This repository contains some little shell scripts allowing to process some **EL
 ## Commands
 
 Three commands are available:
-* extract-debug-infos.sh: the actual real command doing the job
-* extract-debug-infos-from-dir.sh: a wrapper over extract-debug-infos.sh allowing to process all files in a specific dir
-* extract-debug-infos-from-tree.sh: a wrapper over extract-debug-infos-from-dir.sh allowing to process recursivelly all files under a specific directory.
+* **__extract-debug-infos.sh__**: the actual real command doing the job
+* **__extract-debug-infos-from-dir.sh__**: a wrapper over extract-debug-infos.sh allowing to process all files in a specific dir
+* **__extract-debug-infos-from-tree.sh__**: a wrapper over extract-debug-infos-from-dir.sh allowing to process recursivelly all files under a specific directory.
 
 When a file <an_elf> is processed, debug infos are extracted from it (the file is stripped from them) and they are dumped in a file named .debug/<an_elf>.debug.
 The readelf allows to see the build id. Next listing shows a readelf for clang-change-namespace command and clang-change-namespace.debug:
