@@ -2,7 +2,9 @@
 
 This repository contains some little shell scripts allowing to process some ELF containiong debug infos in order to extract these infos and save them in some dedicated files. These files are then linked to the original object allowing gdb to find debug infos. This link is stored in ELF as a BuildId (NT_GNU_BUILD_ID entry in notes from section .note.gnu.build-id), through the --add-gnu-debuglink option of objcopy command. The buildId is computed thanks to a sha256 sum of the ELF file.
 
-## Three commands are available:
+## Commands
+
+Three commands are available:
 * extract-debug-infos.sh: the actual real command doing the job
 * extract-debug-infos-from-dir.sh: a wrapper over extract-debug-infos.sh allowing to process all files in a specific dir
 * extract-debug-infos-from-tree.sh: a wrapper over extract-debug-infos-from-dir.sh allowing to process recursivelly all files under a specific directory.
@@ -10,7 +12,7 @@ This repository contains some little shell scripts allowing to process some ELF 
 When a file <an_elf> is processed, debug infos are extracted from it (the file is stripped from them) and they are dumped in a file named .debug/<an_elf>.debug.
 The readelf allows to see the build id. Next listing shows a readelf for clang-change-namespace command and clang-change-namespace.debug:
 
-```
+```shellsession
 cohen@mobdevrcs:/usr/local/src/data2/misc/LLVM/llvm-7/build-Debug/_CPack_Packages/Linux/TXZ/LLVM-7.0.0svn-Linux/bin$ LANG=C readelf -a ./clang-change-namespace
 ELF Header:
   Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
@@ -114,7 +116,7 @@ Displaying notes found in: .note.gnu.build-id
 cohen@mobdevrcs:/usr/local/src/data2/misc/LLVM/llvm-7/build-Debug/_CPack_Packages/Linux/TXZ/LLVM-7.0.0svn-Linux/bin$ 
 ```
 
-```
+```shellsession
 cohen@mobdevrcs:/usr/local/src/data2/misc/LLVM/llvm-7/build-Debug/_CPack_Packages/Linux/TXZ/LLVM-7.0.0svn-Linux-Debug/LLVM-7.0.0svn-Linux/bin/.debug$ LANG=C readelf -a ./clang-change-namespace.debug 
 ELF Header:
   Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
