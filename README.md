@@ -1,6 +1,6 @@
 # extract-debug-infos
 
-This repository contains some little shell scripts allowing to process some ELF containiong debug infos in order to extract these infos and save them in some dedicated files. These files are then linked to the original object allowing gdb to find debug infos. This link is stored in ELF as a BuildId (NT_GNU_BUILD_ID entry in notes from section .note.gnu.build-id), through the --add-gnu-debuglink option of objcopy command. The buildId is computed thanks to a sha256 sum of the ELF file.
+This repository contains some little shell scripts allowing to process some **ELF** containing debug infos in order to extract these infos and save them in some dedicated files. These files are then linked to the original **ELF** object allowing **gdb** to find debug infos. This link is stored in **ELF** as a __BuildId__ (**NT_GNU_BUILD_ID** entry in notes from section **__.note.gnu.build-id__**), through the **--add-gnu-debuglink** option of **objcopy** command. The __buildId__ is computed thanks to a **sha256** sum of the **ELF** file.
 
 ## Commands
 
