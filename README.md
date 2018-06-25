@@ -5,9 +5,9 @@ This repository contains some little shell scripts allowing to process some _ELF
 ## Commands
 
 Three commands are availables:
-* **_extract-debug-infos.sh_**: the actual real command doing the job
-* **_extract-debug-infos-from-dir.sh_**: a wrapper over extract-debug-infos.sh allowing to process all files in a specific dir
-* **_extract-debug-infos-from-tree.sh_**: a wrapper over extract-debug-infos-from-dir.sh allowing to process recursivelly all files under a specific directory.
+* **_extract-debug-infos.sh_** [(doc)](docs/extract-debug-infos.md): the actual real command doing the job
+* **_extract-debug-infos-from-dir.sh_** [(doc)](docs/extract-debug-infos-from-dir.md): a wrapper over extract-debug-infos.sh allowing to process all files in a specific dir
+* **_extract-debug-infos-from-tree.sh_** [(doc)](docs/extract-debug-infos-from-tree.md): a wrapper over extract-debug-infos-from-dir.sh allowing to process recursivelly all files under a specific directory.
 
 When a file <an_elf> is processed, debug infos are extracted from it (the file is stripped from them) and they are dumped in a file named .debug/<an_elf>.debug.
 The readelf allows to see the build id. Next listing shows a readelf for clang-change-namespace command and clang-change-namespace.debug:
@@ -237,4 +237,4 @@ Displaying notes found in: .note.gnu.build-id
 cohen@mobdevrcs:/usr/local/src/data2/misc/LLVM/llvm-7/build-Debug/_CPack_Packages/Linux/TXZ/LLVM-7.0.0svn-Linux-Debug/LLVM-7.0.0svn-Linux/bin/.debug$     
 ```
 
- -- Rémi Cohen-Scali <cohen@mobdevrcs.jayacode.fr>, Mon, 25 Jun 2018 17:44:15 +0200
+ -- Rémi Cohen-Scali <cohen@mobdevrcs.jayacode.fr>, Mon, 25 Jun 2018 17:51:12 +0200
