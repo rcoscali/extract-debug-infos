@@ -30,8 +30,8 @@ tostripfile=`basename "$1"`
 
 if test -z "${tostripfile}"
 then
+  errorexit -1 "tostrip must be specified"
   usage
-  errorexit 0 "tostrip must be specified"
 fi
 
 cd "${tostripdir}"
@@ -63,14 +63,14 @@ else
             DebugBuildID=`getBuildID $debugdir/$debugfile`
 	    if test $BuildID = $DebugBuildID
 	    then
-	        echo "Skipping $tostripfile: already processed ..."
+	        errorexit 1 "WARNING! Skipping $tostripfile: already processed ..."
 	    else
-	        echo "*** WARNING! Skipping $tostripfile: already stripped but BuildID doesn't match!"
+	        errorexit -2 "*** ERROR! Skipping $tostripfile: already stripped but BuildID doesn't match!"
 	    fi
         else
-	    echo "*** WARNING! Skipping $tostripfile: already stripped but debug file missing"
+	    errorexit -3 "*** ERROR! Skipping $tostripfile: already stripped but debug file missing"
         fi
     else
-        echo "*** WARNING! Skipping $tostripfile: not the kind of file type I can handle ..."
+        errorexit -4 "*** ERROR! Skipping $tostripfile: not the kind of file type I can handle ..."
     fi
 fi
