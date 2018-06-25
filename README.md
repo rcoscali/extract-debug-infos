@@ -1,13 +1,13 @@
 # extract-debug-infos
 
-This repository contains some little shell scripts allowing to process some **ELF** containing debug infos in order to extract these infos and save them in some dedicated files. These files are then linked to the original **ELF** object allowing **gdb** to find debug infos. This link is stored in **ELF** as a __BuildId__ (**NT_GNU_BUILD_ID** entry in notes from section **__.note.gnu.build-id__**), through the **--add-gnu-debuglink** option of **objcopy** command. The __buildId__ is computed thanks to a **sha256** sum of the **ELF** file.
+This repository contains some little shell scripts allowing to process some **ELF** containing debug infos in order to extract these infos and save them in some dedicated files. These files are then linked to the original **ELF** object allowing **gdb** to find debug infos. This link is stored in **ELF** as a _BuildId_ (**NT_GNU_BUILD_ID** entry in notes from section **_.note.gnu.build-id_**), through the **--add-gnu-debuglink** option of **objcopy** command. The _buildId_ is computed thanks to a **sha256** sum of the **ELF** file.
 
 ## Commands
 
 Three commands are available:
-* **__extract-debug-infos.sh__**: the actual real command doing the job
-* **__extract-debug-infos-from-dir.sh__**: a wrapper over extract-debug-infos.sh allowing to process all files in a specific dir
-* **__extract-debug-infos-from-tree.sh__**: a wrapper over extract-debug-infos-from-dir.sh allowing to process recursivelly all files under a specific directory.
+* **_extract-debug-infos.sh_**: the actual real command doing the job
+* **_extract-debug-infos-from-dir.sh_**: a wrapper over extract-debug-infos.sh allowing to process all files in a specific dir
+* **_extract-debug-infos-from-tree.sh_**: a wrapper over extract-debug-infos-from-dir.sh allowing to process recursivelly all files under a specific directory.
 
 When a file <an_elf> is processed, debug infos are extracted from it (the file is stripped from them) and they are dumped in a file named .debug/<an_elf>.debug.
 The readelf allows to see the build id. Next listing shows a readelf for clang-change-namespace command and clang-change-namespace.debug:
