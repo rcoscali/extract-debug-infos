@@ -16,5 +16,10 @@ The script handles exception conditions as:
 * the file is already stripped and debug infos file doesn't exists  (exit code -4)
 * the file is already stripped and the debug infos file found is not related to the _ELF_ object  (exit code -5)
 * the file is already stripped and the debug infos file already exists  (exit code 1)
+  ```shellsession
+  cohen@mobdevrcs:/usr/local/src/data2/misc/LLVM/llvm-7/build-Debug/bin$ extract-debug-infos.sh tool-template
+  WARNING! Skipping tool-template: already processed ...
+  cohen@mobdevrcs:/usr/local/src/data2/misc/LLVM/llvm-7/build-Debug/bin$ 
+  ```
 
 At now scripts doesn't manage cross compilation. It could be implemented later.

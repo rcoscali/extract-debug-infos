@@ -1,2 +1,26 @@
 
 *.md~
+
+build-Debug/\.ninja_deps
+
+build-Debug/\.ninja_log
+
+build-Debug/build\.ninja
+
+build-Debug/cmake_install\.cmake
+
+build-Debug/CMakeCache\.txt
+
+build-Debug/extract-debug-infos-from-dir\.sh
+
+build-Debug/extract-debug-infos-from-tree\.sh
+
+build-Debug/extract-debug-infos\.sh
+
+build-Debug/install_manifest\.txt
+
+build-Debug/rules\.ninja
+
+build-Debug/CMakeFiles/3\.10\.2/
+
+build-Debug/CMakeFiles/
