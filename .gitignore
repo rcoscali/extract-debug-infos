@@ -24,3 +24,21 @@ build-Debug/rules\.ninja
 build-Debug/CMakeFiles/3\.10\.2/
 
 build-Debug/CMakeFiles/
+
+CMakeFiles/3\.10\.2/
+
+CMakeFiles/
+
+cmake_install\.cmake
+
+CMakeCache\.txt
+
+extract-debug-infos-from-dir\.sh
+
+extract-debug-infos-from-tree\.sh
+
+extract-debug-infos\.sh
+
+install_manifest\.txt
+
+Makefile

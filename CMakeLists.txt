@@ -10,9 +10,12 @@ cmake_minimum_required(VERSION 3.5)
 project(ExtractDebugInfos LANGUAGES NONE)
 
 # Set variables for install directories
-set(CMAKE_INSTALL_PREFIX /usr/local)
-message("PREFIX=${CMAKE_INSTALL_PREFIX}")
+if(NOT EXISTS "${CMAKE_INSTALL_PREFIX}") 
+  set(CMAKE_INSTALL_PREFIX /usr/local)
+endif(NOT EXISTS "${CMAKE_INSTALL_PREFIX}")
 set(BINDIR "${CMAKE_INSTALL_PREFIX}/bin" CACHE PATH "Installation directory for binaries")
+
+message("PREFIX=${CMAKE_INSTALL_PREFIX}")
 message("BINDIR=${BINDIR}")
 
 # Set variables for used commands
