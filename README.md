@@ -237,4 +237,11 @@ Displaying notes found in: .note.gnu.build-id
 cohen@mobdevrcs:/usr/local/src/data2/misc/LLVM/llvm-7/build-Debug/_CPack_Packages/Linux/TXZ/LLVM-7.0.0svn-Linux-Debug/LLVM-7.0.0svn-Linux/bin/.debug$     
 ```
 
- -- Rémi Cohen-Scali <cohen@mobdevrcs.jayacode.fr>, Mon, 25 Jun 2018 17:51:12 +0200
+# Building and installing
+
+* Clone from git
+* Configure from current dir or a build dir. Use CMAKE_INSTALL_PREFIX to change installation directory
+* Install (need sudo if install destination requires priviledges)
+
+
+ -- Rémi Cohen-Scali <cohen@mobdevrcs.jayacode.fr>, Tue, 26 Jun 2018 19:21:41 +0200
