@@ -1,5 +1,6 @@
 2018-06-27  Rémi Cohen-Scali  <cohen@mobdevrcs.jayacode.fr>
 
+	* Added AUTHORS, ChangeLog, NEWS and README
 	* Updated REDAME.md for autotools
 	* added autogen.sh
-	
+
