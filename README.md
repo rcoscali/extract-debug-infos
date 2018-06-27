@@ -239,9 +239,17 @@ cohen@mobdevrcs:/usr/local/src/data2/misc/LLVM/llvm-7/build-Debug/_CPack_Package
 
 # Building and installing
 
+## With cmake
+
 * Clone from git
 * Configure from current dir or a build dir. Use CMAKE_INSTALL_PREFIX to change installation directory
 * Install (need sudo if install destination requires priviledges)
 
+## With autotools
+
+* Clone from git
+* ./autogen.sh (with embedded autogen.sh or any from an IDE template for ex)
+* ./configure --prefix=/usr
+* make install (need sudo if install destination requires priviledges as /usr)
 
  -- Rémi Cohen-Scali <cohen@mobdevrcs.jayacode.fr>, Tue, 26 Jun 2018 19:21:41 +0200
