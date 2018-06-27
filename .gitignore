@@ -42,3 +42,13 @@ extract-debug-infos\.sh
 install_manifest\.txt
 
 Makefile
+
+*.ac#
+
+\.#configure\.ac
+
+config\.log
+
+configure
+
+autom4te\.cache/
