@@ -56,3 +56,5 @@ autom4te\.cache/
 config\.status
 
 Makefile\.in
+
+*.sh~
